@@ -32,7 +32,7 @@ class InsertFinishEvent extends Event implements ShouldBroadcast
      */
     public function broadcastOn()
     {
-        return new Channel('insert3');
+        return new Channel('insert.'.$this->user->id);
 //        return ['insert.'.$this->user->id];
     }
 
